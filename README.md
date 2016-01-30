@@ -23,7 +23,7 @@ https://github.com/SYTW/hello-express
 
     $ npm install express-generator@4.9.0
 
-#### Express basic structure	genera
+#### Express basic structure generation
 
     $ node_modules/express-generator/bin/express
 
@@ -40,3 +40,31 @@ https://github.com/SYTW/hello-express
 
     $ SET DEBUG=converter:*
     $ npm start
+
+## Layout & partial
+
+### Install the package express-partials
+#### For last version
+
+   $ npm install --save express-partials
+
+#### For this proyect version
+
+    $ npm install --save express-partials@0.3.0
+
+### Import/install MW	express-partials in app.js
+#### add lines in app.js
+
+ `var partials = require('express-partials');`
+
+ `app.use(partials());`
+
+### add	template layout (views/layout.ejs)
+  `<header>`
+  `<nav>`
+  `<section> here set body changes for each view`
+  `<footer>`
+
+ - note : The view layout.ejs has common code as template, only the body code.
+in <section > which will be changed for each view, the others views have only
+their own code of body.
