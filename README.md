@@ -98,3 +98,9 @@ where result1 and result2 are the two member of this array result[result1, resul
 controllers are adapted the the unique view `index.ejs`  viewing the two inerfaces `<%= result1 %>` and `<%= result2 %>`.
 
   - See the file `index.ejs` in the Directory ``views/converters/`
+ 
+
+## Links :
+* **[iaas Deployment](http://10.6.128.187:8081)**
+* **[GitHub](https://github.com/alu4543/STW-6)**
+* **[web de la asignatura](http://alu4543.github.io/)**
