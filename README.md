@@ -23,7 +23,7 @@ https://github.com/SYTW/hello-express
 
     $ npm install express-generator@4.9.0
 
-#### Express basic structure generation
+#### Express basic structure	genera
 
     $ node_modules/express-generator/bin/express
 
@@ -68,3 +68,33 @@ https://github.com/SYTW/hello-express
  - note : The view layout.ejs has common code as template, only the body code.
 in <section > which will be changed for each view, the others views have only
 their own code of body.
+
+## controllers and routes
+1. imported javaScript controller and convert classes from previous practice
+  - See the files `convert.js` and `Measures.js` in the Directory `/controllers/`
+
+2. the router `routes/index` returns an array `return[result1,result2 ];`
+
+`var result = Converter.convert(req.body.original);`
+`var result1 = result[0];`
+`var result2 = result[1];`
+
+  - See the file `index.js` in the Directory `/routes`
+
+3. created the only one file router for the only one interface of the app
+  `routes/index` for `views/converters/index` where we have created two routes:
+
+  GET =>
+
+  `res.render('converters/index', { title: '', result1: "", result2: ""});`
+
+  POST =>
+
+  `res.render('converters/index',  {result1: result1 , result2: result2});`
+
+where result1 and result2 are the two member of this array result[result1, result2] exported by `convert.js`.
+
+## views
+controllers are adapted the the unique view `index.ejs`  viewing the two inerfaces `<%= result1 %>` and `<%= result2 %>`.
+
+  - See the file `index.ejs` in the Directory ``views/converters/`
